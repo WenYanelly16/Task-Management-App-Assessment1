@@ -9,7 +9,7 @@ let idCounter = 1;
 
 // Display the main page with the list of tasks
 router.get('/', (req, res) => {
-    res.render('tasks', {tasks});
+    res.render('task', {tasks});
 });
 
 // Handle form submissions to add a new task

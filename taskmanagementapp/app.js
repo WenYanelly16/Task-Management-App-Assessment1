@@ -3,7 +3,7 @@
 import express from "express";
 import path from "path";
 const app = express();
-import taskmanagementRoutes from "./route/taskmanagementRoutes.js";
+import taskmanagementRoutes from "./routes/taskmanagementRoutes.js";
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(process.cwd(), "public")));

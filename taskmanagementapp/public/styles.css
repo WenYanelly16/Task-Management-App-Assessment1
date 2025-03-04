@@ -1,1 +1,173 @@
 /*Filename: ./public/styles.css*/
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container for the app */
+.container {
+    width: 100%;
+    max-width: 300px; 
+    margin: 0 auto;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #5c6bc0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Form styling - Compact and Vertical */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #5c6bc0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+
+form textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+form button {
+    padding: 6px;
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1e2b77;
+}
+
+/* Task list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #f9f9f9;
+    padding: 8px;
+    border: 1px solid #dd5c5c;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(128, 10, 10, 0.1);
+}
+
+li.completed {
+    background-color: #e8f5e9;
+    border-color: #c8e6c9;
+}
+
+li.completed h2,
+li.completed p {
+    text-decoration: line-through;
+    color: #c55c5c;
+}
+
+li h2 {
+    font-size: 1rem;
+    color: #333;
+}
+
+li p {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 3px;
+}
+
+/* Buttons inside tasks */
+li form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+li form button {
+    padding: 5px 8px;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+li form button[type="submit"] {
+    background-color: #ff4362;
+    color: #fff;
+}
+
+li form button[type="submit"]:hover {
+    background-color: #a52b3f;
+}
+
+li form button[type="submit"]:last-child {
+    background-color: #ff4362;
+}
+
+li form button[type="submit"]:last-child:hover {
+    background-color: #a52b3f;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    li {
+        align-items: flex-start;
+    }
+
+    li form {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 6px;
+    }
+}
