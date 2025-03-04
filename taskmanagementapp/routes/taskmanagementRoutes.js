@@ -19,5 +19,14 @@ router.post('/add-task', (req, res) => {
     res.redirect('/');
 });
 
+// Toggle the completed status of a task
+router.post('/toggle-task/:id', (req, res) => {
+    const taskId = parseInt(req.params.id);
+    const task = tasks.find(t => t.id === taskId);
+    if (task) {
+        task.completed = !task.completed;
+    }
+    res.redirect('/');
+});
 
     export default router;
