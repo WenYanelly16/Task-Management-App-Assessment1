@@ -29,4 +29,10 @@ router.post('/toggle-task/:id', (req, res) => {
     res.redirect('/');
 });
 
+// Delete a task by its ID
+router.post('/delete-task/:id', (req, res) => {
+    const taskId = parseInt(req.params.id);
+    tasks = tasks.filter(t => t.id !== taskId);
+    res.redirect('/');
+});
     export default router;
