@@ -1,4 +1,3 @@
-/*Filename: ./public/styles.css*/
 /* General Reset */
 * {
     margin: 0;
@@ -11,15 +10,18 @@ body {
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
-    padding: 20px;
+    display: flex; /* Add this to center the form */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    padding: 20px; /* Add some padding around the edges */
 }
 
 /* Container for the app */
 .container {
     width: 100%;
-    max-width: 300px; 
-    margin: 0 auto;
-    padding: 15px;
+    max-width: 400px; /* Set a max-width for the form */
+    padding: 20px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -37,27 +39,26 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     margin-bottom: 15px;
 }
 
 form input[type="text"],
 form textarea {
     width: 100%;
-    padding: 6px;
+    padding: 8px;
     border: 1px solid #5c6bc0;
     border-radius: 5px;
     font-size: 0.9rem;
 }
 
-
 form textarea {
     resize: vertical;
-    min-height: 60px;
+    min-height: 80px;
 }
 
 form button {
-    padding: 6px;
+    padding: 8px;
     background-color: #5c6bc0;
     color: white;
     border: none;
@@ -79,10 +80,10 @@ ul {
 
 li {
     background: #f9f9f9;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #dd5c5c;
     border-radius: 5px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -113,7 +114,7 @@ li h2 {
 li p {
     font-size: 0.85rem;
     color: #555;
-    margin-top: 3px;
+    margin-top: 5px;
 }
 
 /* Buttons inside tasks */
@@ -154,7 +155,7 @@ li form button[type="submit"]:last-child:hover {
 /* Responsive Design */
 @media (max-width: 400px) {
     .container {
-        padding: 10px;
+        padding: 15px;
     }
 
     h1 {
