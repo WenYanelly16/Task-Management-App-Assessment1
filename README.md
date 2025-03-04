@@ -18,16 +18,16 @@ All tasks are stored in-memory, and no database is required.
 ## Setup Instructions
  1. Cd into the Directory
 
-cd taskmanagementapp
+    cd taskmanagementapp
 
 2. Run the application
 
-npm start
+   npm start
 
 3. Open a new terminal and run curl command
 
-curl -i http://localhost:3000
-The app will be available at http://localhost:3000
+   curl -i http://localhost:3000
+   The app will be available at http://localhost:3000
 
 ## Usage Guide
 1. Open the browser and go to http://localhost:3000
