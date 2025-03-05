@@ -5,6 +5,7 @@ import path from "path";
 const router = express.Router();
 
 let tasks = [];
+
 let idCounter = 1;
 
 // Display the main page with the list of tasks
